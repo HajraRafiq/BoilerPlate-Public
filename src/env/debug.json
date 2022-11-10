@@ -1,0 +1,71 @@
+{
+    "environment": "debug",
+    "app": {
+        "domain": "localhost",
+        "cookie_domain": "localhost"
+    },
+    "server": {
+        "version": "1.0",
+        "name": "Eleanor",
+        "host": "0.0.0.0",
+        "port": 3500,
+        "ssl": false,
+        "api_prefix": "/v1",
+        "sms_api": "http://bykea.eocean.us:24555/api?action=sendmessage&username=bykea_9210_api&password=ByKeAqwecd&recipient=#receiver&originator=9210&messagedata=#msg"
+    },
+    "checkout":{
+        "key":"sk_test_75525a35-2cd8-4dcf-b150-ec710e4b672f"
+    },
+    "fastify": {
+        "log_level": 30
+    },
+    "jwt": {
+        "secret": "9e06765b-93bc-4e07-bc59-2e666a51bb0b"
+    },
+    "raptor": {
+        "base_url": "http://localhost:3300",
+        "api_key": "9d5c27000ff97ff834ba7eced290f8a01ac840750d58b8adeafc323176a033f74fc6c74e8ada6b6fbf65a7189dc43fecac829eb496788c6a1f4f052b2b4c2cdc",
+        "client_token": "/v1/authenticate/client",
+        "customer_auth": "/v1/authenticate/customer",
+        "customer_registration": "/v2/signup/customer",
+        "customer_default_password": "p9FFS3K93p",
+        "raptor_role": 7
+    },
+    "talos": {
+        "base_url": "http://localhost:3000/api",
+        "register_customer": "/v1/register/customer",
+        "check_customer": "/v1/check/customer",
+        "bykea_cash": "/v2/bookings",
+        "tracking_link": "/v1/fetch/tracking/link"
+    },
+    "queues": {
+        "rabbitmq": {
+            "host": "localhost",
+            "username": "admin",
+            "password": "admin",
+            "port": 15672
+        }
+    },
+    "storage": {
+        "s3": {
+            "pool_id": "eu-west-1:19881c67-5a16-442f-a8fd-1ef78c5e5ef9",
+            "bucket": "bcash.staging",
+            "region": "eu-west-1"
+        }
+    },
+    "database": {
+        "pgsql": {
+            "host": "localhost",
+            "port": 5432,
+            "database": "postgres",
+            "user": "postgres",
+            "password": "123"
+        }
+    },
+    "cache": {
+        "redis": {
+            "host": "localhost",
+            "port": 6379
+        }
+    }
+}
